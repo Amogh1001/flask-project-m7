@@ -17,7 +17,7 @@ def get_db_connection():
     return pyodbc.connect(conn_str)
 
 # CRUD Operations
-@app.route('/students', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_students():
     conn = get_db_connection()
     cursor = conn.cursor()
